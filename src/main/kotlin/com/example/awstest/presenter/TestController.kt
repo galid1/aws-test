@@ -9,7 +9,7 @@ class TestController(
     private val testService: TestService
 ) {
     @GetMapping("/")
-    fun test() {
-        testService.service()
+    fun test(): String {
+        return testService.service()
     }
 }

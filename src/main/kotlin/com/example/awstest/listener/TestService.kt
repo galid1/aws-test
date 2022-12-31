@@ -9,8 +9,7 @@ class TestService(
     @Value("\${secret.data}")
     lateinit var secretData: String
 
-
-    fun service() {
-        println("secret @@@@@@@ : ${secretData}")
+    fun service(): String {
+        return secretData
     }
 }
