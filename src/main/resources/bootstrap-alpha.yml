@@ -1,0 +1,3 @@
+aws:
+  secretsmanager:
+    prefix: /aws-test/alpha

@@ -1,0 +1,2 @@
+secret:
+  data: ${TEST_DATA}
