@@ -1,5 +1,5 @@
 secret:
-  data: ${TEST_DATA}
+  data: local
 
 spring:
   h2:

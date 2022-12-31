@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service
 
 @Service
 class TestService(
-    @Value("\${secret.data}")
-    var secretData: String?,
 ) {
+    @Value("\${secret.data}")
+    lateinit var secretData: String
+
+
     fun service() {
         println("secret @@@@@@@ : ${secretData}")
     }
