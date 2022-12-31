@@ -1,2 +1,10 @@
 secret:
   data: ${TEST_DATA}
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    driver-class-name: org.h2.Driver

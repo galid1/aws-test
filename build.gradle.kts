@@ -16,7 +16,12 @@ repositories {
 }
 
 dependencies {
+    runtimeOnly("com.h2database:h2")
     implementation("org.springframework.boot:spring-boot-starter-web")
+
+    // secret
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.3")
+    implementation("org.springframework.cloud:spring-cloud-starter-aws-secrets-manager-config:2.2.6.RELEASE")
 
     // aws
     implementation("org.springframework.boot:spring-boot-starter-batch")
