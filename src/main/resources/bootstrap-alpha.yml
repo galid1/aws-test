@@ -1,3 +1,4 @@
 aws:
   secretsmanager:
-    prefix: /aws-test/alpha
+    prefix: /aws-test
+    name: alpha
