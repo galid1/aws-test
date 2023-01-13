@@ -1,4 +1,4 @@
-package com.example.awstest.config
-
-class AwsConfig {
-}
+//package com.example.awstest.config
+//
+//class AwsConfig {
+//}
