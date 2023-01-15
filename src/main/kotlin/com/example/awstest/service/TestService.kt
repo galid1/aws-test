@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class TestService(
     private val testRepository: TestRepository,
-    private val evictor: CacheEvictor
+//    private val evictor: CacheEvictor
 ) {
     init {
         testRepository.save(TestEntity(name = "A"))
@@ -32,7 +32,7 @@ class TestService(
     @Transactional
     fun update() {
         val bu  = testRepository.findByName("A")
-        evictor.evict(bu!!.id!!)
+//        evictor.evict(bu!!.id!!)
         bu?.name = "B"
     }
 }

@@ -30,8 +30,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
 
     // cache
-    implementation ("com.github.ben-manes.caffeine:caffeine:_")
+//    implementation ("com.github.ben-manes.caffeine:caffeine:_")
     implementation("org.springframework.boot:spring-boot-starter-cache")
+    implementation("com.hazelcast:hazelcast-all:_")
 
     // jpa
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
