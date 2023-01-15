@@ -17,6 +17,8 @@ class TestService(
 
     @Cacheable(cacheNames = ["test_cache"], key = "#id")
     fun service(id: Long): String? {
+        println("no cache !")
+
         return testRepository.findById(id)
             .get()
             ?.let {

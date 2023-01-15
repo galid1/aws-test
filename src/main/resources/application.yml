@@ -11,9 +11,3 @@ spring:
     url: jdbc:mysql://testdb.cwvhqcq8efz1.ap-northeast-2.rds.amazonaws.com:3306/testdb?serverTimezone=UTC
     username: admin
     password: karrotmarket
-
-logging:
-  level:
-    org:
-      springframework:
-        cache: TRACE
