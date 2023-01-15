@@ -18,7 +18,6 @@ class HazelcastCacheConfig {
                         awsConfig.isEnabled = true
                         awsConfig.setProperty("tag-key", "hazel")
                     }
-
             }
 
         return Hazelcast.newHazelcastInstance(config)

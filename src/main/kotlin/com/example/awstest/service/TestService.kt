@@ -2,6 +2,7 @@ package com.example.awstest.service
 
 import com.example.awstest.jpa.TestEntity
 import com.example.awstest.jpa.TestRepository
+import org.springframework.cache.annotation.CacheEvict
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -30,9 +31,10 @@ class TestService(
     }
 
     @Transactional
-    fun update() {
-        val bu  = testRepository.findByName("A")
-//        evictor.evict(bu!!.id!!)
-        bu?.name = "B"
+    @CacheEvict(cacheNames = ["test_cache"], key = "#id")
+    fun update(id: Long) {
+        val bu  = testRepository.findById(id)
+            .get()
+        bu.name = "B"
     }
 }

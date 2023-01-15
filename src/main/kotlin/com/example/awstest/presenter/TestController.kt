@@ -14,8 +14,8 @@ class TestController(
         return testService.service(id)
     }
 
-    @GetMapping("/")
-    fun update() {
-        testService.update()
+    @GetMapping("/e/{id}")
+    fun update(@PathVariable("id") id: Long) {
+        testService.update(id)
     }
 }
